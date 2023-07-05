@@ -1,0 +1,31 @@
+<!-- <h1>Book Store</h1> -->
+<!-- <h2><a routerLink="add">Add New Book</a></h2> -->
+<body>
+    <h2>List of Books</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Price</th>
+                <th colspan="2">Action</th>
+            </tr>   
+        </thead>  
+        <tr *ngFor="let book of books | async">
+            <td>{{book.title}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.price}}</td>
+            <td>
+                <button (click)="deleteBook(book.id)">
+                    Delete
+                </button>
+            </td>
+            <td>
+                <button (click)="updateBook(book.id)">
+                    Edit
+                </button>
+            </td>
+        </tr>
+    </table>
+</body>
+

@@ -1,0 +1,14 @@
+
+<body>
+    <form (ngSubmit)="onSubmit()">
+        <h2>New Book Form</h2>
+        Title: <input type="text" name="bookTitle" autocomplete="off" required [(ngModel)]="book.title"><br><br>
+        Author: <input type="text" name="bookAuthor" autocomplete="off" required [(ngModel)]="book.author"><br><br>
+        Price: <input type="number" step="0.01" name="bookPrice" required [(ngModel)]="book.price"><br><br>
+        <button type="submit">Submit</button>
+        &nbsp;
+        <button (click)="gotoList()">Back to Book List</button>
+    </form>
+</body>
+
+
