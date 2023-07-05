@@ -19,7 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.snva.bookstore_springboot.entity.Book;
 import com.snva.bookstore_springboot.service.BookService;
 
-@RestController @CrossOrigin(origins="http://localhost:4200")
+@RestController 
+@CrossOrigin(origins="http://localhost:4200")
 @RequestMapping("/api")
 public class BookController {
     @Autowired
